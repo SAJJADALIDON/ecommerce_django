@@ -131,3 +131,22 @@ STATICFILES_DIRS = [
 # media files configuration
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR /'media'
+
+from django.contrib.messages import constants as messages
+
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'secondary',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',  # maps 'error' → Bootstrap 'danger'
+}
+
+# SMTP configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sa2ss6@gmail.com'
+EMAIL_HOST_PASSWORD = 'urswynbnqpwsnmlv'
+EMAIL_USE_TLS = True
+# https://myaccount.google.com/apppasswords / ✔ Remove spaces from app password
